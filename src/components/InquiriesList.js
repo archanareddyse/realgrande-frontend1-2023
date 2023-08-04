@@ -8,7 +8,7 @@ const InquiriesList = () => {
     useEffect( () =>{
         async function getEnquiries(){
             try {
-              const response = await axios.get('http://localhost:3002/enquiries');
+              const response = await axios.get(process.env.REACT_APP_LINKTOBACKEND+'/enquiries');
               //console.log('called and waiting');
              // console.log(response);
               let data = await response.data;
