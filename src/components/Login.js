@@ -17,7 +17,7 @@ const Login = () => {
     const handleLogin = async () => {
         try {
             console.log(email,password);
-            const response = await axios.post('http://localhost:3002/login',{ email, password });
+            const response = await axios.post(process.env.REACT_APP_LINKTOBACKEND+'/login',{ email, password });
             console.log(response);
             let data = response.data;
             console.log(data);
