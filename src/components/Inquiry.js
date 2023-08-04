@@ -82,7 +82,7 @@ let submitHandler = (e) =>{
     const submitEnquiry = async () => {
     try {
         console.log({...contactInfo});
-        const response = await axios.post('http://localhost:3002/addEnquiry',{...contactInfo});
+        const response = await axios.post(process.env.REACT_APP_LINKTOBACKEND+'addEnquiry',{...contactInfo});
         console.log(response);
         let data = response.data;
         console.log(data);        
