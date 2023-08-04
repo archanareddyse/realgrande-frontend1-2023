@@ -22,7 +22,7 @@ const SignUp = () => {
 const handleSignup = async () => {
     try {
         //console.log({...contactInfo});
-        const response = await axios.post('http://localhost:3002/signup',{fname,lname,email,pass});
+        const response = await axios.post(process.env.REACT_APP_LINKTOBACKEND+'/signup',{fname,lname,email,pass});
         console.log(response);
         let data = response.data;
         console.log(data);        
